@@ -1,10 +1,9 @@
 install:
-	python3 -m venv venv
-	source venv/bin/activate && pip install -r requirements.txt
+	python3 -m venv venv && source venv/bin/activate && pip install -r requirements.txt && pip install -e .
 
 test:
-	source venv/bin/activate && PYTHONPATH=/home/apalumbo/shared-dev-env/apalumbo/git/chat-cli pytest tests
-
+	source venv/bin/activate && PYTHONPATH=${PYTHONPATH}:/home/apalumbo/shared-dev-env/apalumbo/git/chat-cli/chat-cli pytest tests
+     
 clean:
 	rm -rf venv
 	find . -type f -name "*.pyc" -delete

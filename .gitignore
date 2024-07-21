@@ -1,2 +1,3 @@
 chat-cli/venv/**
 **/__pycache__/
+chat-cli/.env

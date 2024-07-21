@@ -3,7 +3,7 @@ import os
 import json
 import yaml
 from unittest.mock import patch
-from chat_cli.chat_cli import interact_with_gpt, load_context
+from chat_cli.chat_cli import interact_with_gpt, load_context, setup_logging
 
 class TestChatCLI(unittest.TestCase):
 
@@ -11,7 +11,8 @@ class TestChatCLI(unittest.TestCase):
     def test_interact_with_gpt(self, mock_create):
         mock_create.return_value.choices[0].text.strip.return_value = "Test Response"
         context = {"temperature": 0.7, "model": "gpt-4"}
-        response = interact_with_gpt("Test Message", context)
+        logger = setup_logging(context)
+        response = interact_with_gpt("Test Message", context, logger)
         self.assertEqual(response, "Test Response")
 
     def test_load_context_json(self):

@@ -1,5 +1,7 @@
 README.md
 setup.py
+chat_cli/__init__.py
+chat_cli/chat_cli.py
 chat_cli.egg-info/PKG-INFO
 chat_cli.egg-info/SOURCES.txt
 chat_cli.egg-info/dependency_links.txt
