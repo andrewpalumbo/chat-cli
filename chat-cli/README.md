@@ -1,12 +1,14 @@
 # Chat-CLI
 
-## Version: 0.0.1
+## Version: 0.0.3
 
 A simple command-line interface for interacting with ChatGPT-4.
 
 ### Features
 
 - Send messages to ChatGPT-4 and receive responses directly from the command line.
+- Use different contexts dynamically via JSON and YAML configuration files.
+- Added logging and colorized output for responses.
 
 ### Setup
 
@@ -32,7 +34,7 @@ OPENAI_API_KEY=your_openai_api_key
 ### Usage
 
 ```bash
-python chat_cli.py "Your message here"
+python chat_cli.py --context gpt-coder "Your message here"
 ```
 
 ### Tests

@@ -1,5 +1,7 @@
 {
     "api_version": "v1",
     "temperature": 0.5,
-    "model": "gpt-3.5-code-davinci-002"
+    "model": "gpt-3.5-code-davinci-002",
+    "log_level": "INFO",
+    "log_format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 }
